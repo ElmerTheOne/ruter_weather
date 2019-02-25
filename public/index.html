@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang=en>
+  <head>
+      <meta charset=utf-8>
+      <title>h0308 sine hjelpsome verktøy</title>
+  </head>
+  <body>
+    <div id="cont">
+      <div id="kollektiv"></div>
+      <div id="weather">
+
+      </div>
+      <script type="text/javascript">
+        if (typeof(Storage) !== "undefined") {
+          // Code for localStorage/sessionStorage.
+          var asd = localStorage.getItem("loc");
+          if(asd == null) {
+            var loc = prompt("Please enter your location", "loc");
+
+            if(loc != null) {
+              console.log(loc);
+              localStorage.setItem("loc", loc)
+
+            }
+
+          }
+          var g = document.createElement('script');
+          g.setAttribute('type', 'text/javascript');
+          g.value = 'console.log("cuck u");';
+          var p = document.getElementById("weather");
+          p.appendChild(g);
+
+
+        } else {
+          // Sorry! No Web Storage support..
+        }
+      </script>
+    </div>
+  </body>
+</html>
